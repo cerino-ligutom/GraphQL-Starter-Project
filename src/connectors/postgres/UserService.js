@@ -3,21 +3,21 @@
 import User from './models/User';
 import BaseService from './BaseService';
 
-class UserConnector extends BaseService {
-  static instance: UserConnector;
+class UserService extends BaseService {
+  static instance: UserService;
 
   constructor() {
     super(User);
 
     // Singleton
-    if (!UserConnector.instance) {
-      UserConnector.instance = this;
+    if (!UserService.instance) {
+      UserService.instance = this;
     }
-    return UserConnector.instance;
+    return UserService.instance;
   }
 }
 
-const instance = new UserConnector();
+const instance = new UserService();
 Object.freeze(instance);
 
 export default instance;

@@ -7,7 +7,7 @@ export default class BaseService {
 
   constructor(model: ModelClass) {
     if (!model) {
-      throw Error('No derived connector provided');
+      throw Error('No derived service provided');
     }
     this.model = model;
   }
