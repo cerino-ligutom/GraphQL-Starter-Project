@@ -1,9 +1,9 @@
 // @flow
 
 import User from './models/User';
-import BaseConnector from './BaseConnector';
+import BaseService from './BaseService';
 
-class UserConnector extends BaseConnector {
+class UserConnector extends BaseService {
   static instance: UserConnector;
 
   constructor() {

@@ -11,7 +11,7 @@ const environment = {
     HOST: process.env.HOST || 'localhost',
     LOG_DIRECTORY: `${appRoot}/logs`,
     DATABASE: {
-      URL: 'postgres://user:password@localhost:5432/db',
+      URL: 'postgres://user:password@localhost:5432/db_name',
       POOL_MIN: 2,
       POOL_MAX: 10,
       TIMEOUT: 60000, // in ms

@@ -1,5 +1,5 @@
-import UserConnector from './UserConnector';
+import UserService from './UserService';
 
 export default {
-  UserConnector,
+  UserService,
 };

@@ -1,16 +1,16 @@
 import { ApolloServer } from 'apollo-server-express';
 
 import schema from './schema';
-import InMemoryConnector from '../connectors/in-memory';
-import pgConnectors from '../connectors/postgres';
+import inMemoryContainer from '../connectors/in-memory';
+import pgConnector from '../connectors/postgres';
 
 export default (app) => {
   const server = new ApolloServer({
     schema,
     context: ({ req }) => ({
       user: req.user,
-      InMemoryConnector,
-      ...pgConnectors,
+      inMemoryContainer,
+      pgConnector,
     }),
     playground: {
       settings: {

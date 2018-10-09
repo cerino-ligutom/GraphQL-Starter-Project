@@ -2,7 +2,7 @@
 
 import { ModelClass } from 'objection';
 
-export default class BaseConnector {
+export default class BaseService {
   model: ModelClass;
 
   constructor(model: ModelClass) {
